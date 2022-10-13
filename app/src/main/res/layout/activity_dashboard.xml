@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground"
+    tools:context=".DashboardActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/gordita_bold"
+            android:text="Online Tails"
+            android:textSize="32sp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:srcCompat="@drawable/footer" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="160sp"
+        android:background="@drawable/round_bg"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="match_parent"
+            android:layout_height="100sp"
+            app:srcCompat="@drawable/main_bg" />
+    </LinearLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/add_pets"
+        android:layout_width="140sp"
+        android:layout_height="140sp"
+        android:background="?selectableItemBackgroundBorderless"
+        app:cardCornerRadius="20sp"
+        app:cardElevation="5sp"
+        app:cardMaxElevation="5sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/journal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.19">
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="15sp"
+            android:fontFamily="@font/gordita_bold"
+            android:text="My Pets" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="70sp"
+            android:layout_height="70sp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:background="?android:selectableItemBackgroundBorderless"
+            app:srcCompat="@drawable/add_pets" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/medicine"
+        android:layout_width="140sp"
+        android:layout_height="140sp"
+        android:layout_marginTop="4dp"
+        app:cardCornerRadius="20sp"
+        app:cardElevation="5sp"
+        app:cardMaxElevation="5sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/appointments"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_pets"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="15sp"
+            android:fontFamily="@font/gordita_bold"
+            android:text="Medicine" />
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="70sp"
+            android:layout_height="70sp"
+            android:layout_gravity="center"
+            android:contentDescription="medicine"
+            android:layout_marginBottom="20dp"
+            android:background="?android:selectableItemBackgroundBorderless"
+            android:clickable="true"
+            app:srcCompat="@drawable/add_medicine" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/grooming"
+        android:layout_width="140sp"
+        android:layout_height="140sp"
+        android:layout_marginTop="4dp"
+        app:cardCornerRadius="20sp"
+        app:cardElevation="5sp"
+        app:cardMaxElevation="5sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/supplies"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/medicine"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="15sp"
+            android:fontFamily="@font/gordita_bold"
+            android:text="Grooming" />
+
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="70sp"
+            android:layout_height="70sp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:background="?android:selectableItemBackgroundBorderless"
+            app:srcCompat="@drawable/add_grooming" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/journal"
+        android:layout_width="140sp"
+        android:layout_height="140sp"
+        app:cardCornerRadius="20sp"
+        app:cardElevation="5sp"
+        app:cardMaxElevation="5sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/medicine"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.19">
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="15sp"
+            android:fontFamily="@font/gordita_bold"
+            android:text="Journal" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="70sp"
+            android:layout_height="70sp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:background="?android:selectableItemBackgroundBorderless"
+            app:srcCompat="@drawable/add_journal" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/appointments"
+        android:layout_width="140sp"
+        android:layout_height="140sp"
+        android:layout_marginTop="4dp"
+        app:cardCornerRadius="20sp"
+        app:cardElevation="5sp"
+        app:cardMaxElevation="5sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/grooming"
+        app:layout_constraintTop_toBottomOf="@+id/journal"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="15sp"
+            android:fontFamily="@font/gordita_bold"
+            android:text="Appointments" />
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="70sp"
+            android:layout_height="70sp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:background="?android:selectableItemBackgroundBorderless"
+            app:srcCompat="@drawable/add_appointments" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/supplies"
+        android:layout_width="140sp"
+        android:layout_height="140sp"
+        android:layout_marginTop="4dp"
+        app:cardCornerRadius="20sp"
+        app:cardMaxElevation="5sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.83"
+        app:layout_constraintStart_toEndOf="@+id/grooming"
+        app:layout_constraintTop_toBottomOf="@+id/appointments"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="15sp"
+            android:fontFamily="@font/gordita_bold"
+            android:text="Supplies" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="70sp"
+            android:layout_height="70sp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:background="?android:selectableItemBackgroundBorderless"
+            app:srcCompat="@drawable/add_supplies" />
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

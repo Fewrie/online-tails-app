@@ -3,7 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/sajsa/StudioProjects/OnlineTails/app/src/main/res/drawable/add_appointments.xml" value="0.2055" />
+        <entry key="..\:/Users/sajsa/StudioProjects/OnlineTails/app/src/main/res/drawable/login_page_bg.xml" value="0.1765" />
+        <entry key="..\:/Users/sajsa/StudioProjects/OnlineTails/app/src/main/res/drawable/main_bg.xml" value="0.2055" />
         <entry key="..\:/Users/sajsa/StudioProjects/OnlineTails/app/src/main/res/drawable/new_account_bg.xml" value="0.2055" />
+        <entry key="..\:/Users/sajsa/StudioProjects/OnlineTails/app/src/main/res/drawable/round_bg.xml" value="0.2055" />
+        <entry key="..\:/Users/sajsa/StudioProjects/OnlineTails/app/src/main/res/layout/activity_dashboard.xml" value="0.34479166666666666" />
         <entry key="..\:/Users/sajsa/StudioProjects/OnlineTails/app/src/main/res/layout/activity_login.xml" value="0.34479166666666666" />
         <entry key="..\:/Users/sajsa/StudioProjects/OnlineTails/app/src/main/res/layout/activity_main.xml" value="0.34479166666666666" />
         <entry key="..\:/Users/sajsa/StudioProjects/OnlineTails/app/src/main/res/layout/activity_sign_up.xml" value="0.34479166666666666" />
