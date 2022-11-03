@@ -146,7 +146,7 @@
         app:layout_constraintVertical_bias="0.06999999" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView3"
+        android:id="@+id/signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:cardBackgroundColor="@color/colorAccent"
