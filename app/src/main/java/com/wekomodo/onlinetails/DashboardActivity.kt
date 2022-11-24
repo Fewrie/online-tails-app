@@ -1,12 +1,12 @@
 package com.wekomodo.onlinetails
 
-import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.firebase.auth.FirebaseAuth
+import com.wekomodo.onlinetails.authentication.LoginActivity
 import com.wekomodo.onlinetails.databinding.ActivityDashboardBinding
 
 
@@ -28,11 +28,15 @@ class DashboardActivity : AppCompatActivity() {
                 .setPositiveButton(resources.getString(R.string.accept)) { _, _ ->
                     mAuth.signOut()
                     Log.d("signout","clicked")
-                    val intent = Intent(this,LoginActivity::class.java)
+                    val intent = Intent(this, LoginActivity::class.java)
                     startActivity(intent)
                     finish()
                 }
                 .show()
+        }
+        binding.myPets.setOnClickListener{
+            val intent = Intent(this@DashboardActivity, MyPets::class.java)
+            startActivity(intent)
         }
         }
 }

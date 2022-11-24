@@ -1,11 +1,11 @@
-package com.wekomodo.onlinetails
+package com.wekomodo.onlinetails.authentication
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
+import com.wekomodo.onlinetails.DashboardActivity
 import com.wekomodo.onlinetails.databinding.ActivitySignUpBinding
 
 class SignUpActivity : AppCompatActivity() {
@@ -33,7 +33,7 @@ class SignUpActivity : AppCompatActivity() {
                     if (task.isSuccessful) {
                         // Sign in success, update UI with the signed-in user's information
                         val user = mAuth.currentUser
-                        val intent = Intent(this,DashboardActivity::class.java)
+                        val intent = Intent(this, DashboardActivity::class.java)
                         startActivity(intent)
                         finish()
                     } else {

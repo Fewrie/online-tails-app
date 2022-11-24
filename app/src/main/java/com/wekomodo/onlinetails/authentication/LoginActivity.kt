@@ -1,11 +1,14 @@
-package com.wekomodo.onlinetails
+package com.wekomodo.onlinetails.authentication
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.TextUtils
 import android.util.Log
+import android.util.Patterns
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
+import com.wekomodo.onlinetails.DashboardActivity
 import com.wekomodo.onlinetails.databinding.ActivityLoginBinding
 
 
@@ -19,11 +22,16 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
         val currentUser = mAuth.currentUser
         if(currentUser != null){
-            val intent = Intent(this,DashboardActivity::class.java)
+            val intent = Intent(this, DashboardActivity::class.java)
             startActivity(intent)
             finish()
         }
+        binding.forgotPassword.setOnClickListener{
+            val intent = Intent(this, ForgotPassword::class.java)
+            startActivity(intent)
+        }
         binding.loginButton.setOnClickListener{
+
             val email = binding.email.text.toString()
             val password = binding.password.text.toString()
             if(email.isEmpty() || password.isEmpty()){
@@ -35,7 +43,7 @@ class LoginActivity : AppCompatActivity() {
                     if (task.isSuccessful) {
                         // Sign in success, update UI with the signed-in user's information
                         val user = mAuth.currentUser
-                        val intent = Intent(this,DashboardActivity::class.java)
+                        val intent = Intent(this, DashboardActivity::class.java)
                         startActivity(intent)
                         finish()
                     } else {
@@ -47,8 +55,11 @@ class LoginActivity : AppCompatActivity() {
                 }
         }
         binding.signupButton.setOnClickListener{
-            val intent = Intent(this,SignUpActivity::class.java)
+            val intent = Intent(this, SignUpActivity::class.java)
             startActivity(intent)
         }
+    }
+    fun isValidEmail(target: CharSequence?): Boolean {
+        return !TextUtils.isEmpty(target) && Patterns.EMAIL_ADDRESS.matcher(target).matches()
     }
 }

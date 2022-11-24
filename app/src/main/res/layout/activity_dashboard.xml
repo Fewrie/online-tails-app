@@ -35,6 +35,7 @@
         android:layout_height="160sp"
         android:background="@drawable/round_bg"
         android:orientation="vertical"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -50,18 +51,21 @@
 
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/add_pets"
+        android:id="@+id/my_pets"
         android:layout_width="140sp"
         android:layout_height="140sp"
         android:background="?selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:foreground="?selectableItemBackgroundBorderless"
         app:cardCornerRadius="20sp"
         app:cardElevation="5sp"
         app:cardMaxElevation="5sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/journal"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:layout_constraintVertical_bias="0.19">
+        app:layout_constraintVertical_bias="0.185">
 
         <TextView
             android:id="@+id/textView12"
@@ -79,6 +83,7 @@
             android:layout_gravity="center"
             android:layout_marginBottom="20dp"
             android:background="?android:selectableItemBackgroundBorderless"
+            android:clickable="false"
             app:srcCompat="@drawable/add_pets" />
     </androidx.cardview.widget.CardView>
 
@@ -86,15 +91,16 @@
         android:id="@+id/medicine"
         android:layout_width="140sp"
         android:layout_height="140sp"
-        android:layout_marginTop="4dp"
+        android:clickable="true"
+        android:foreground="?selectableItemBackgroundBorderless"
         app:cardCornerRadius="20sp"
         app:cardElevation="5sp"
         app:cardMaxElevation="5sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/appointments"
+        app:layout_constraintBottom_toTopOf="@+id/grooming"
+        app:layout_constraintEnd_toStartOf="@+id/supplies"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_pets"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <TextView
             android:id="@+id/textView13"
@@ -110,10 +116,10 @@
             android:layout_width="70sp"
             android:layout_height="70sp"
             android:layout_gravity="center"
-            android:contentDescription="medicine"
             android:layout_marginBottom="20dp"
             android:background="?android:selectableItemBackgroundBorderless"
-            android:clickable="true"
+            android:clickable="false"
+            android:contentDescription="medicine"
             app:srcCompat="@drawable/add_medicine" />
     </androidx.cardview.widget.CardView>
 
@@ -121,15 +127,17 @@
         android:id="@+id/grooming"
         android:layout_width="140sp"
         android:layout_height="140sp"
-        android:layout_marginTop="4dp"
+        android:layout_marginBottom="32dp"
+        android:clickable="true"
+        android:foreground="?selectableItemBackgroundBorderless"
         app:cardCornerRadius="20sp"
         app:cardElevation="5sp"
         app:cardMaxElevation="5sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/supplies"
+        app:layout_constraintEnd_toStartOf="@+id/appointments"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/medicine"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toBottomOf="@+id/medicine">
 
         <TextView
             android:id="@+id/textView14"
@@ -147,6 +155,7 @@
             android:layout_gravity="center"
             android:layout_marginBottom="20dp"
             android:background="?android:selectableItemBackgroundBorderless"
+            android:clickable="false"
             app:srcCompat="@drawable/add_grooming" />
     </androidx.cardview.widget.CardView>
 
@@ -154,14 +163,17 @@
         android:id="@+id/journal"
         android:layout_width="140sp"
         android:layout_height="140sp"
+        android:clickable="true"
+        android:foreground="?selectableItemBackgroundBorderless"
         app:cardCornerRadius="20sp"
         app:cardElevation="5sp"
         app:cardMaxElevation="5sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/medicine"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/my_pets"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:layout_constraintVertical_bias="0.19">
+        app:layout_constraintVertical_bias="0.185">
 
         <TextView
             android:id="@+id/textView15"
@@ -179,6 +191,7 @@
             android:layout_gravity="center"
             android:layout_marginBottom="20dp"
             android:background="?android:selectableItemBackgroundBorderless"
+            android:clickable="false"
             app:srcCompat="@drawable/add_journal" />
     </androidx.cardview.widget.CardView>
 
@@ -186,15 +199,16 @@
         android:id="@+id/appointments"
         android:layout_width="140sp"
         android:layout_height="140sp"
-        android:layout_marginTop="4dp"
+        android:clickable="true"
+        android:foreground="?selectableItemBackgroundBorderless"
         app:cardCornerRadius="20sp"
         app:cardElevation="5sp"
         app:cardMaxElevation="5sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/grooming"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/grooming"
-        app:layout_constraintTop_toBottomOf="@+id/journal"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toTopOf="@+id/grooming">
 
         <TextView
             android:id="@+id/textView16"
@@ -212,6 +226,7 @@
             android:layout_gravity="center"
             android:layout_marginBottom="20dp"
             android:background="?android:selectableItemBackgroundBorderless"
+            android:clickable="false"
             app:srcCompat="@drawable/add_appointments" />
     </androidx.cardview.widget.CardView>
 
@@ -219,15 +234,15 @@
         android:id="@+id/supplies"
         android:layout_width="140sp"
         android:layout_height="140sp"
-        android:layout_marginTop="4dp"
+        android:clickable="true"
+        android:foreground="?selectableItemBackgroundBorderless"
         app:cardCornerRadius="20sp"
         app:cardMaxElevation="5sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/medicine"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.83"
-        app:layout_constraintStart_toEndOf="@+id/grooming"
-        app:layout_constraintTop_toBottomOf="@+id/appointments"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/medicine"
+        app:layout_constraintTop_toTopOf="@+id/medicine">
 
         <TextView
             android:id="@+id/textView17"
@@ -245,6 +260,7 @@
             android:layout_gravity="center"
             android:layout_marginBottom="20dp"
             android:background="?android:selectableItemBackgroundBorderless"
+            android:clickable="false"
             app:srcCompat="@drawable/add_supplies" />
     </androidx.cardview.widget.CardView>
 
@@ -259,6 +275,31 @@
         app:layout_constraintHorizontal_bias="0.98"
         app:layout_constraintStart_toStartOf="@+id/toolbar"
         app:layout_constraintTop_toTopOf="@+id/toolbar" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.96"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976"
+        app:srcCompat="@drawable/add" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Active Alerts"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/medicine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_pets"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
